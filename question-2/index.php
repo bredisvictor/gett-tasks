@@ -3,5 +3,5 @@
 <?php elseif ($siteImageUrl = wp_get_attachment_image_src('site_image', 'full')) : ?>
     <img src="<?=$siteImageUrl; ?>">
 <?php else : ?>
-    <img src="<?=wp_get_attachment_image_src('placeholder', 'full') ?>">
+    <img src="<?=wp_get_attachment_image_src('placeholder', 'full'); ?>">
 <?php endif; ?>
