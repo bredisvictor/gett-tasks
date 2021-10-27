@@ -5,7 +5,7 @@ $include_menu_for_blogs_ids = [7];
 $main_blog_id = get_main_site_id();
 $current_blog_id = get_current_blog_id();
 
-// Switch to main blog configurations, in case current blog id found in $include_menu_for_blogs_ids variable
+// Switch to main blog configurations, in case the current blog id is found in $include_menu_for_blogs_ids variable
 if (in_array($current_blog_id, $include_menu_for_blogs_ids)
     && $main_blog_id != $current_blog_id) {
         
