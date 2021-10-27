@@ -1,0 +1,31 @@
+$sizes: 3;
+$classes: (
+    'mt': ('margin-top'),
+    'mb': ('margin-bottom'),
+    'my': ('margin-top', 'margin-bottom')
+);
+$medium-screen-width: 768px;
+
+@mixin medium-screens-and-bigger() {
+    @media (min-width: $medium-screen-width) {
+        @content;
+    }
+}
+
+@mixin create-classes($screen) {
+    @for $size from 1 through $sizes {
+        @each $name, $props in $classes {
+            .#{$name}#{$screen}-#{$size}0 {
+                @each $prop in $props {
+                    #{$prop}: $size * 10px; 
+                }
+            }
+        }
+    }
+}
+
+@include create-classes('');
+@include medium-screens-and-bigger {
+    @include create-classes('-md');
+}
+

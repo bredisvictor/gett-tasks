@@ -1,0 +1,12 @@
+#main-section,
+#section-2 {
+    display: block;
+    color: black;
+    background-color: #fff;
+    margin-right: 20px;
+    margin: 0px;
+}
+    
+#main-section {
+    background-color: #a7a7a7; 
+}

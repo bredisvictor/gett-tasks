@@ -1,0 +1,26 @@
+$sizes: 3;
+
+@mixin create-selectors($screen) {
+    @for $index from 1 through $sizes {
+  
+        .mt#{$screen}-#{$index}0 { 
+            margin-top: $index * 10px; 
+        }
+
+        .mb#{$screen}-#{$index}0 { 
+            margin-bottom: $index * 10px; 
+        }
+
+        .my#{$screen}-#{$index}0 { 
+            margin-top: $index * 10px; 
+            margin-bottom: $index * 10px; 
+        }
+    }
+}
+
+@include create-selectors('');
+
+@media (min-width: 768px) {
+    @include create-selectors('-md');
+}
+
