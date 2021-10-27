@@ -15,7 +15,7 @@ class ListService
     {
         $items = $this->getItemsFromCache();
         if (empty($items)) {
-            $items = $this->itemsApi->get_items;
+            $items = $this->itemsApi->get_items();
             $this->setItems($items);
         }
 
